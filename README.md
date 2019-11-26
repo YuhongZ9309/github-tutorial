@@ -1,6 +1,6 @@
-# GitHub Tutorial
+c9 c# GitHub Tutorial
 
-_by <your-name-here>_
+_by Yuhong Zhao_
 
 ---
 ## Git vs. GitHub
