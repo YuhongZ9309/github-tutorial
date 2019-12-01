@@ -13,7 +13,9 @@ Git is a version control system where we can use to keep track of the work. Gith
 
 ---
 ## Repository Setup
-To set up a respoitory, you will need to create a directory first in your IDE. A directory is basically a folder that contains files. 
+To initialize Git, you would need to create a directory that will contain your project. A directory is a file system folder where we put our files, such as documents, images, and videos. Once you have created a directory, navigate to your directory by using `cd <filename>`. Then, using `git init` to get git started. This means that your directory will be converted to a repository.  A repository is a version control system where developers and software engineers stores their code. You can also see the `(master)` next to the command prompt.  
+>  In other words, a directory is just a folder that may or may not contain files, while a repository is basically a directory that has git running.
+
 
 
 ---
