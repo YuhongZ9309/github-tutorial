@@ -14,16 +14,16 @@ Git is a version control system where we can use to keep track of the work. Gith
 
 ---
 ## Repository Setup
-Before we start using Git, we would have to do some additional one-time steps. We will need a Github account. If you don’t currently have one you can go [here](https://github.com/join?source=header-home) to create a new account.
-* Basic information  
+Before we start using Git, we would have to do some additional one-time steps. We will need a Github account. If you don’t currently have one you can go [here](https://github.com/join?source=header-home) to create a new account.  
+1. Basic information  
     * Enter your desired username, email address, and password  
     * Complete the Captcha  
-* Plan  
+2. Plan  
     * For beginners, pick the free plans  
-* Complete Setup  
+3. Complete Setup  
     * Enter your responses according to the questions and click *Complete Setup*
     * If you don’t want to do this, you can skip this by clicking *Skip this step* at the end
-* Verify your email address
+4. Verify your email address
     * GitHub will send you an email to the email address you’ve provided and just open the link in that email to verify your account.
 
 Once you have an account, we will need an IDE (Integrated development environment) to type your codes. Your IDE would be your local IDE and will contain files locally. Local IDE runs off your computer using your computer’s resources. Here we will be using [ide.cs50.io](https://ide.cs50.io)  as our IDE. This is a remote IDE because it runs off a server somewhere else in the world. Each type of IDE have their benefits and drawbacks, but using a remote IDE would be more beneficial, especially if you are a beginner. One of the biggest benefits is you will not be able to mess up and corrupt your system because you are constrained in a *box*. Unlike a local IDE, you have access to your computer’s file; but if you don’t know what you doing and accidentally deleted something, it can cause your system to crash. 
