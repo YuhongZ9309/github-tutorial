@@ -77,10 +77,21 @@ You can attach messages to each commit you do, so you keep a note of what does e
 ---
 ## Rolling Back Changes
 Once you have saved many changes, you can use `git log` to view all the commits you have made. What if you have made some errors and you want to go back to the last commit that you’ve made? It is recommended to use ‘`git diff` to show you any changes you’ve made ever since the last commit. Texts that you have added will be highlighted in green along with a `+`, while texts that you have deleted will be highlighted in red. You can use the command `git checkout -- <filename>` to discard any changes you have made — *texts in green would be deleted and texts in red would come back*.  After discarding any changes you can use `git diff` again to make sure you did it correctly. It should respond with nothing.
-* your files must not be on the stage in order to use `git diff` and `git checkout` correctly.  
+* Your files must not be on the stage in order to use `git diff` and `git checkout` correctly. 
 
 What if you accidentally added your files to the staging area and you want to remove the files off from the stage so you can use `git diff` and `git checkout`? Well, you can always unstage a file by using `git reset HEAD <filename>`. Just be sure to replace the `<filename>` with the actual name of the file you want to unstage. 
->NOTE: If you ever forget the command for unstaging and discarding changes, you can always use `git status` to find the command.
+>NOTE: If you ever forget the command for unstaging and discarding changes, you can always use `git status` to find the command. 
+
+If you were to make a typo and want you change the commit message of your last commit, you can just simply use `git commit --amend -m “<new-message>”` to change the message of the last commit. What if you committed but you forgot to include a file to that commit? You can also fix that by simply adding the files to the stage that you forgot to commit, and then use the command again, `git commit --amend -m “<new-message>”`.
+* It is basically the same but with the addition of `--amend`. With it, you can fix the most recent commit message, but does not allow you to change the commit messages of older commits. 
+
+What if you don’t want to change the commit message and you just want to delete or *undo* the last commit? You can use the command `git reset --soft HEAD~1` to basically *rewinds* back into into the commit before the last commit. `--soft` allows to keep your changes and untouched. But if you just want to undo a commit and have all the changes discard, then you just replace `--soft` with `--hard`— `git reset --hard HEAD~1`.
+
+But if you want to just go back in history and start from an older commit, then you use `git reset --hard <SHA KEY>`. Replace the SHA key with the one attached to the commit you want to  revert back to. 
+* SHA key are those unique ID provided to each commits. You can view the SHA key when use `git log`. It will be something similar: `commit fab7b189c7ed8e5b14d85f50b837709e99b22e70`
+>NOTE: You can just use the first 7 characters instead of the whole string.
+
+
 
 
 ---
