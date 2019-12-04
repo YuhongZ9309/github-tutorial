@@ -97,3 +97,20 @@ But if you want to just go back in history and start from an older commit, then 
 
 
 ---
+## Erorr Handling 
+Used `git init` in the wrong folder or directory? Don’t worry! You can always remove git or *uninitialize* git by removing a folder called `.git`. Every thing when you use initialize git, it will create that folder where it will store all the commits and necessary files. In your IDE, it will be hidden because it starts with a dot. You can toggle on to show hidden files in the settings. 
+To uninitialize git and remove the `.git` folder, use the command `rm -rf .git`
+> `rm` is a remove command, while `-rf` basically means “force removal”. 
+
+This command can also be used with any that you want to remove. Just beware that this command is very powerful as you cannot undo this action and there would be no warning. If you are sure, the command is `rm -rf <filename>`. Just replace `<filename>` with the actual name of the file you want to remove. You can also use this command for remove repos within your local IDE. 
+But if you want to completely remove a repo, you will need to use the command mentioned above and as well as removing it in GitHub website. 
+####How to delete repo from GitHub
+1. Head over to your repo’s main page on GitHub website
+2. Click on Setting and scroll down all the way to the last section, **DANGER ZONE**.
+3. There are four options and click on the last option, **Delete this Repository**.
+4. Type in the name of the repo you are deleting to confirm
+5. If done correctly, the continue option would be available. Click on it to ***understand the consequences, delete this repository***.
+
+
+
+
