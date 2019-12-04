@@ -111,6 +111,39 @@ But if you want to completely remove a repo, you will need to use the command me
 4. Type in the name of the repo you are deleting to confirm
 5. If done correctly, the continue option would be available. Click on it to ***understand the consequences, delete this repository***.
 
+---
+## How to Fork and Clone
+GitHub is a website server that stores code, made with the intention of collaborating with other users. In GitHub, you must download their repo in order to test or make changes.
+
+If you just want to test someone’s code and play around with it, you can clone their project on GitHub to your local IDE. ***Cloning is copying from a remote to a local.*** This is like basically downloading a copy of the software and play with it. 
+#### Directions on how to clone:
+1. You will first need the SSH key of the repo you want to clone.
+	* Head to the repo’s main page on GitHub and find **Clone and download**
+	* Click on it and copy the **SSH key** only. Do not copy the HTTPS key.
+2.  Go back to your IDE, and type `git clone`. Then, paste the SSH key after space.
+	* Make sure that you are in the right place where you wish your file to be cloned. 
+ 	* If you cloned it in the wrong place, you can just use `rm -rf` to delete it. Then navigate to the right place and then clone. 
+> A good rule of thumb is to `cd` right into the folder you cloned so you will not be making files in the wrong place.
+
+If you do not want to test someone’s project, but instead want to add changes and provide suggestions to the owner, then you will need to fork the project. Forking a project is making a version of their project that resides in your account. ***Forking is copying for a someone’s remote to your remote.***  
+#### To fork someone’s project:
+1. You will just need to go over to the repo’s main page on GitHub. 
+2. There will be an option to fork this project. Click on it and it will start forking.
+3. Wait till it is finish forking, then you can just clone the forked repo to your IDE so you can start editing and adding changes. 
+
+If you cloned someone’s repo and then made some changes, you cannot push your changes because you do not have permission to change someone else’s repo. If you forked, all the changes will be a push to your forked repo. Here you have permission to do so because you are basically pushing changes to your own repo. If you clone from your own existing repo such as forked repos, you do not need to setup up the bridge connection again as that bridge will be already established.
+
+---
+## How to Pull Request
+After you’ve forked, cloned repo, and have pushed all changes to your forked repo, you can now send these changes to the owner as suggestions. These suggestions in GitHub are called Pull Request. To do so, just click on **New Pull Request** and then click on it again. After that, you can add a message to that pull request. Once done, just press “Create pull request”.
+> Pull request should be helpful in explaining what changes you’ve or files you’ve deleted/created.
+
+The owner can review your changes and then if approved, your changes will be merged into the master branch of the code (the main code). 
+
+The owner can also copy from the repo with your changes into his IDE. Once the changes are merged, the remote repo on GitHub “is ahead” of your local by *n* commits, or your local “is behind of your remote by *n* commits. The owner can update the local by using `git pull` which fetch the last modified repository.
+
+
+
 
 
 
