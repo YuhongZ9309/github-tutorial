@@ -66,9 +66,13 @@ Once you have made some changes and committed those changes, you will need to pu
 ---
 ## Workflow & Commands
 **Congratulation! You now have git running!**    
+
 As you work on your projects — making and modifying files, it is important to take a *snapshot* of your code. Taking a *snapshot* or committing in git means saving the changes you’ve made till now. Before committing your files, it’s important to use `git status` to tell you which files are ready to commit. Files in red means they have been modified but have not yet added to the staging area. Files in green means they have been modified but is currently in the staging area and ready to be committed.  
+
 To take a *snapshot* of your code, you must first add the files you want to commit to the staging area by using `git add <filename>`. You can add more than one file to the staging area by adding a space between each file name. You can also use `git add .` to add all the files in red.  
+
 It’s recommended to use `git status` again to see if you have added the files properly. The files that were in red before should be in green. Once all your desired files have been added to the staging area, you can use the command `git commit -m “<message>”` to commit.   
+
 You can attach messages to each commit you do, so you keep a note of what does each commit did. Commit messages should be meaningful and in the present tense, Below are examples of good and bad examples.  
 
 
@@ -76,19 +80,19 @@ You can attach messages to each commit you do, so you keep a note of what does e
 
 ---
 ## Rolling Back Changes
-Once you have saved many changes, you can use `git log` to view all the commits you have made. What if you have made some errors and you want to go back to the last commit that you’ve made? It is recommended to use ‘`git diff` to show you any changes you’ve made ever since the last commit. Texts that you have added will be highlighted in green along with a `+`, while texts that you have deleted will be highlighted in red. You can use the command `git checkout -- <filename>` to discard any changes you have made — *texts in green would be deleted and texts in red would come back*.  After discarding any changes you can use `git diff` again to make sure you did it correctly. It should respond with nothing.
+Once you have saved any changes, you can use the `git log` function to view all the commits you have made. What if you have made some errors and you want to go back to the last commit that you’ve made? It is recommended to use ‘`git diff` to show you any changes you’ve made ever since the last commit. Texts that you have added will be highlighted in green along with a `+`, while texts that you have deleted will be highlighted in red. You can use the command `git checkout -- <filename>` to discard any changes you have made — *texts in green would be deleted and texts in red would come back*.  After discarding any changes you can use `git diff` again to make sure you did it correctly. It should respond with nothing.
 * Your files must not be on the stage in order to use `git diff` and `git checkout` correctly. 
 
 What if you accidentally added your files to the staging area and you want to remove the files off from the stage so you can use `git diff` and `git checkout`? Well, you can always unstage a file by using `git reset HEAD <filename>`. Just be sure to replace the `<filename>` with the actual name of the file you want to unstage. 
 >NOTE: If you ever forget the command for unstaging and discarding changes, you can always use `git status` to find the command. 
 
-If you were to make a typo and want you change the commit message of your last commit, you can just simply use `git commit --amend -m “<new-message>”` to change the message of the last commit. What if you committed but you forgot to include a file to that commit? You can also fix that by simply adding the files to the stage that you forgot to commit, and then use the command again, `git commit --amend -m “<new-message>”`.
+If you were to make a typo and want you to change the commit message of your last commit, you can just simply use `git commit --amend -m “<new-message>”` to change the message of the last commit. What if you committed but you forgot to include a file to that commit? You can also fix that by simply adding the files to the stage that you forgot to commit and then use the command again, `git commit --amend -m “<new-message>”`.
 * It is basically the same but with the addition of `--amend`. With it, you can fix the most recent commit message, but does not allow you to change the commit messages of older commits. 
 
-What if you don’t want to change the commit message and you just want to delete or *undo* the last commit? You can use the command `git reset --soft HEAD~1` to basically *rewinds* back into into the commit before the last commit. `--soft` allows to keep your changes and untouched. But if you just want to undo a commit and have all the changes discard, then you just replace `--soft` with `--hard`— `git reset --hard HEAD~1`.
+What if you don’t want to change the commit message and you just want to delete or *undo* the last commit? You can use the command `git reset --soft HEAD~1` to basically *rewinds* back into the commit before the last commit. `--soft` allows keeping your changes and untouched. But if you just want to undo a commit and have all the changes discard, then you just replace `--soft` with `--hard`— `git reset --hard HEAD~1`.
 
-But if you want to just go back in history and start from an older commit, then you use `git reset --hard <SHA KEY>`. Replace the SHA key with the one attached to the commit you want to  revert back to. 
-* SHA key are those unique ID provided to each commits. You can view the SHA key when use `git log`. It will be something similar: `commit fab7b189c7ed8e5b14d85f50b837709e99b22e70`
+But if you want to just go back in history and start from an older commit, then you use `git reset --hard <SHA KEY>`. Replace the SHA key with the one attached to the commit you want to revert back to. 
+* SHA key are those unique ID provided to each commit. You can view the SHA key when use the `git log` function. It will be something similar: `commit fab7b189c7ed8e5b14d85f50b837709e99b22e70`
 >NOTE: You can just use the first 7 characters instead of the whole string.
 
 
